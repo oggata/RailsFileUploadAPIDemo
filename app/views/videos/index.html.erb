@@ -1,0 +1,20 @@
+<h1>Videos#show</h1>
+<p>Find me in app/views/videos/show.html.erb</p>
+
+<div class="container">
+<ul class="list-unstyled video-list-thumbs row">
+
+<% @videos.each_with_index do |list, i| %>
+
+<li class="col-lg-3 col-sm-4 col-xs-6">
+            <video width="280px" height="280px" id="vdHotPress" controls>
+                <source src="/videos/<%= list.video_file_name %>" type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
+    </li>
+<% end %>
+
+</ul>
+</div>
+
+
